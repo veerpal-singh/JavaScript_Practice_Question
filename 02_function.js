@@ -51,6 +51,45 @@ console.log(stringAlphaBeticalOrder("veer"));
 
 
 
+function capitalizeKaro(input){
+
+    return input
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ")
+
+}
+
+const result = capitalizeKaro("hello veer bhai kaise ho");
+console.log(result);
+
+
+
+// Question 5 => Write a javaScript function to get the number of occurrences
+// of each letter in specified string...
+
+
+function occ(str){
+    
+    var occurences = {}
+
+    str.split("").forEach((elem) =>{
+
+        if(occurences.hasOwnProperty(elem) === false){
+
+            occurences[elem] = 1;
+        }else{
+
+            occurences[elem]++;
+        }
+    })
+
+    return occurences
+}
+
+console.log(occ("veerpal"));
+
+
 
 
 
